@@ -1,64 +1,50 @@
+
 <!DOCTYPE html>
-<head>  
-    <title>Basics</title>
-</head>
-<body>
-    <table cellspacing="20">
-        <tr>
-            <td>
-                <img src="https://pbs.twimg.com/profile_images/1548179041248653312/LGUZYIiC_400x400.jpg">
-            </td>
-            <td>
-                <h1>
-                    Sudhan Suhas
-                    </h1>
-                    <p>A graduate from <strong><I>EEE</I></strong> developing few skills for <strong><I>IT</I></strong></p>
-                    <br>
-            </td>
-        </tr>
-    </table>
-       <hr>
-    <h2>
-        <B> Name of College</B>
-    </h2>
-    <ul>
-           <li><I><a href="https://sapthagiri.edu.in/"><B>Sapthagiri college of engineering</B></a></I></li>
-           <li><I><a href="https://www.klesnc.org/"><B>KLE PU College</B></a></I></li>
-    </ul>
-            <br>
-            <hr>
-            
-            <h3><B>Skills</B></h3>
-            <table cellspacing="10">
-                <tr>
-                    <td>
-                       <I>Python</I>
-                    </td>
-                    <td>
-                        ★★★★
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                       <i>HTML</i>
-                    </td>
-                    <td>
-                        ★★★★★
-                    </td>
-                </tr>
-            </table>
-            <hr>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="birthdayCard">
+      <div class="cardFront">
+        <h3 class="happy">HAPPY BIRTHDAY</h3>
+        <div class="balloons">
+          <div class="balloon-1"></div>
+          <div class="balloon-2"></div>
+          <div class="balloon-3"></div>
+          <div class="balloon-4"></div>
+        </div>
+      </div>
+      <div class="cardInside">
+        
+        <h3 class="back">HAPPY BIRTHDAY</h3>
+        <p>So bro,  
+          Hope you're flying above the deck and I wish for it to continue to do so.
+          Wishing you a very happy birthday. It's been 3.5 yrs knowing you,
+          will always have some gratitude for it. This is all a distant friend can do.
+          Hope you don't forget me since I've become a visitor to Bengaluru.
+        </p>
+        <p class="name">Sudhan Suhas</p>
+        <audio id="voiceMessage" src="rec1.mp3" preload="auto"></audio>
+    </div>
+</div>
+<script>
+    // Play audio when the card is hovered over
+    document.querySelector('.birthdayCard').addEventListener('mouseenter', () => {
+        document.getElementById('voiceMessage').play();
+    });
 
-
-            <h3><B>Hobbies</B></h3>
-            <ol>
-                <li><I>Dreaming</I></li>
-                <li><I>Bike riding</I></li>
-                <li><I>Anime</I></li>
-            </ol>
-            <hr>   
-            
-            <a href="contact me.html"><B><I>Contact Details</I></B></a>
-            <hr>
+    // Pause and reset audio when the cursor leaves the card
+    document.querySelector('.birthdayCard').addEventListener('mouseleave', () => {
+        const audio = document.getElementById('voiceMessage');
+        audio.pause();
+        audio.currentTime = 0; // Optional: Reset playback to start
+    });
+</script>
 </body>
 </html>
